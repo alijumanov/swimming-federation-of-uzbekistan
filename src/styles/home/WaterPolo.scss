@@ -1,0 +1,157 @@
+// colors //
+
+$dark: black;
+$light: white;
+$success: #a4cd00;
+$primary: #021931;
+$succes-light: #E9EFD7;
+$info: rgb(9, 116, 222);
+
+.WaterPolo {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7vw 15vw;
+
+        @media (max-width:767px) {
+            padding: 7vw 5vw;
+        }
+
+        .circle {
+            width: 38vw;
+            height: 38vw;
+            position: absolute;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background-color: $succes-light;
+
+            @media (max-width:767px) {
+                width: 90vw;
+                height: 90vw;
+            }
+        }
+
+        .infos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width:767px) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            .imgs {
+                z-index: 2;
+                width: 32vw;
+                height: 32vw;
+                position: sticky;
+                overflow: hidden;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+
+                @media (max-width:767px) {
+                    width: 70vw;
+                    height: 70vw;
+                }
+
+                .img {
+                    max-width: 100%;
+                    min-width: 100%;
+                    max-height: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .texts {
+                width: 40%;
+                z-index: 2;
+                display: flex;
+                position: sticky;
+                flex-direction: column;
+
+                @media (max-width:767px) {
+                    width: 100%;
+                    margin-top: 4vw;
+                }
+
+                .sub-title {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                .desc {
+                    opacity: 0.8;
+                    line-height: 1.8vw;
+
+                    @media (max-width:767px) {
+                        line-height: 4.5vw;
+                    }
+                }
+
+                .icons {
+                    display: flex;
+                    align-items: center;
+
+                    .info {
+                        display: flex;
+                        align-items: center;
+
+                        .icon {
+                            fill: $info;
+                            width: 2.5vw;
+                            height: 2.5vw;
+                            display: flex;
+                            fill-opacity: 0.7;
+                            align-items: center;
+                            justify-content: center;
+
+                            @media (max-width:767px) {
+                                width: 8vw;
+                                height: 8vw;
+                            }
+                        }
+
+                        .text {
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .btns {
+                    display: flex;
+                    align-items: center;
+
+                    .submit_btn {
+                        color: $light;
+                        font-weight: 600;
+                        padding: 1vw 4vw;
+                        border-radius: 70px;
+                        -webkit-border-radius: 70px;
+                        -moz-border-radius: 70px;
+                        -ms-border-radius: 70px;
+                        -o-border-radius: 70px;
+                        background-color: $success;
+
+                        @media (max-width:767px) {
+                            padding: 2vw 6vw;
+                        }
+                    }
+
+                    .explore {
+                        color: $info;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

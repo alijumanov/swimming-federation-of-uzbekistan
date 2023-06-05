@@ -1,0 +1,23 @@
+// colors //
+
+$dark: black;
+$light: white;
+$success: #a4cd00;
+$primary: #021931;
+$succes-light: #E9EFD7;
+$primary-light: #2C3546;
+$info: rgb(9, 116, 222);
+
+.News {
+    background: linear-gradient(25deg, #27303F 35%, #0A3969 60%);
+
+    .wrapper {
+        display: flex;
+        padding-top: 12vw;
+        flex-direction: column;
+
+        .sub-title {
+            color: $light;
+        }
+    }
+}

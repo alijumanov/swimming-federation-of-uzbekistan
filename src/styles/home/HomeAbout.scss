@@ -1,0 +1,107 @@
+// colors //
+
+$dark: black;
+$light: white;
+$success: #a4cd00;
+$primary: #021931;
+
+.HomeAbout {
+    .wrapper {
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        position: sticky;
+        padding-top: 10vw;
+        align-items: center;
+        padding-bottom: 25vw;
+        justify-content: space-between;
+
+        @media (max-width:767px) {
+            padding-top: 7vw;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .left {
+            width: 38%;
+            color: $primary;
+            font-size: 5.5vw;
+            font-weight: 600;
+            line-height: 6vw;
+            text-align: right;
+            text-transform: uppercase;
+
+            @media (max-width:767px) {
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        .right {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @media (max-width:767px) {
+                width: 100%;
+                margin-top: 3vw;
+            }
+
+            .sub-title {
+                color: $primary;
+            }
+
+            .text {
+                opacity: 0.8;
+                line-height: 1.8vw;
+
+                @media (max-width:767px) {
+                    line-height: 4.5vw;
+                }
+            }
+
+            .explore {
+                color: $light;
+                padding: 0.7vw 4vw;
+                border-radius: 70px;
+                -webkit-border-radius: 70px;
+                -moz-border-radius: 70px;
+                -ms-border-radius: 70px;
+                -o-border-radius: 70px;
+                background-color: $success;
+            }
+        }
+    }
+
+    .full_img {
+        left: 0;
+        top: 20vw;
+        width: 130%;
+        position: absolute;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+
+        @media (max-width:767px) {
+            top: 60vw;
+        }
+    }
+
+    &::after {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3vw;
+        content: "";
+        position: absolute;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+
+        @media (max-width:767px) {
+            height: 5vw;
+        }
+    }
+}
