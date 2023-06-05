@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/additional/About.scss';
 import { FacebookIcon, InstagramIcon, MasterIcon, SearchIcon, SportsmenIcon, TelegramIcon } from '../../assets/svgImages';
-import { Link } from 'react-router-dom';
 
 function About() {
     return (

@@ -1,6 +1,34 @@
+// colors //
+
+$dark: black;
+$light: white;
+$success: #a4cd00;
+$primary: #021931;
+$succes-light: #E9EFD7;
+$primary-light: #2C3546;
+$info: rgb(9, 116, 222);
+
 .NewItem {
     .wrapper {
         display: flex;
+        padding-top: 12vw;
         flex-direction: column;
+
+        @media (max-width:767px) {
+            padding-top: 25vw;
+        }
+
+        .date {
+            opacity: 0.6;
+        }
+
+        .sub-title {
+            color: $primary;
+        }
+
+        .img {
+            max-width: 100%;
+            min-width: 100%;
+        }
     }
 }
