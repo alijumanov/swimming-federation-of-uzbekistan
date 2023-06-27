@@ -44,7 +44,7 @@ export const CloseIcon = () => {
             viewBox="0 0 47 47"
         >
             <path
-                stroke="#ffff"
+                // stroke="#ffff"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="5.863"

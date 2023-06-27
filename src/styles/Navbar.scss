@@ -129,17 +129,21 @@ $success: #a4cd00;
                 }
 
                 .link {
-                    opacity: 0.8;
-                    color: $light;
                     display: flex;
                     position: relative;
                     align-items: center;
                     justify-content: center;
                     text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.794);
 
                     &:hover {
                         &::after {
                             width: 100%;
+                        }
+
+                        .link_bar {
+                            padding-top: 3vw;
+                            visibility: visible;
                         }
                     }
 
@@ -155,6 +159,43 @@ $success: #a4cd00;
                         -o-transition: 0.2s;
                         position: absolute;
                         background-color: $light;
+                    }
+
+                    .link_bar {
+                        top: 0;
+                        left: -5vw;
+                        width: 38vw;
+                        padding-top: 6vw;
+                        visibility: hidden;
+                        position: absolute;
+                        transition: 0.2s linear;
+                        -webkit-transition: 0.2s linear;
+                        -moz-transition: 0.2s linear;
+                        -ms-transition: 0.2s linear;
+
+                        @media (max-width:767px) {
+                            display: none;
+                        }
+
+                        .cont_link {
+                            width: 100%;
+                            gap: 1.2vw 2vw;
+                            display: grid;
+                            border-top-left-radius: 0;
+                            border: 1px solid #d6fb29;
+                            background-color: #354202d2;
+                            grid-template-columns: repeat(2, 2fr);
+                            filter: drop-shadow(5.5px 9.526px 3.5px rgba(0, 0, 0, 0.55));
+                            background-image: linear-gradient(194deg, rgb(158, 178, 76) 0%, rgba(205, 230, 105, 0) 100%);
+                        }
+
+                        .bar-link {
+                            color: $light;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
                 }
 
@@ -209,6 +250,7 @@ $success: #a4cd00;
                     width: 4.5vw;
                     height: 4.5vw;
                     display: flex;
+                    stroke: $success;
                     position: absolute;
                     align-items: center;
                     justify-content: center;
@@ -255,7 +297,9 @@ $success: #a4cd00;
         }
 
         .bottom_navbar {
+            z-index: 0;
             display: flex;
+            position: sticky;
             align-items: center;
             justify-content: flex-end;
 
@@ -289,6 +333,115 @@ $success: #a4cd00;
             }
         }
     }
+
+    .menu_bar {
+        left: 0;
+        z-index: 5;
+        top: -100vh;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        overflow-y: auto;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+        padding: 7vw 10vw;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.834);
+        backdrop-filter: blur(13px);
+
+        @media (max-width:767px) {
+            padding: 13vw 5vw;
+        }
+
+        .close_icon {
+            top: 3vw;
+            right: 4vw;
+            width: 2.3vw;
+            height: 2.3vw;
+            display: flex;
+            cursor: pointer;
+            stroke: $success;
+            transition: 0.2s;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            -ms-transition: 0.2s;
+            -o-transition: 0.2s;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+            }
+
+            @media (max-width:767px) {
+                top: 5vw;
+                right: 6vw;
+                width: 4.5vw;
+                height: 4.5vw;
+            }
+        }
+
+        .searching {
+            width: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+                color: $light;
+                background-color: transparent;
+                border-bottom: solid 1px $success;
+            }
+        }
+
+        .links {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+
+            @media (max-width:767px) {
+                grid-template-columns: repeat(2, 2fr);
+            }
+
+            .tool {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .tool-title {
+                    color: $success;
+                    font-weight: 700;
+                }
+
+                .tool-link {
+                    opacity: 0.8;
+                    color: $light;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .show_menu_bar {
+        top: 0;
+    }
 }
 
 .scrolling_navbar {
@@ -306,5 +459,9 @@ $success: #a4cd00;
         .bottom_navbar {
             display: none;
         }
+    }
+
+    .menu_bar {
+        background-color: rgba(0, 0, 0, 0.943);
     }
 }

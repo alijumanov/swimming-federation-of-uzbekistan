@@ -1,0 +1,15 @@
+.Branches {
+    .wrapper {
+        display: flex;
+        padding-top: 12vw;
+        flex-direction: column;
+
+        @media (max-width:767px) {
+            padding-top: 25vw;
+        }
+
+        .sub-title {
+            font-weight: 600;
+        }
+    }
+}
